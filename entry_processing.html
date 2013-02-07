@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sweepstakes - Entry Processing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/wrap.css" rel="stylesheet">
+  </head>
+  <body class="processing-entry">
+    <div id="progress-wrap">
+      <div id="progress-container">
+          <h1>Processing Entry</h1>
+          <div id="progress-bar" class="big-rounded-corners">
+            <div id="progress-bar-fill" class="big-rounded-corners"></div>
+          </div>
+          <div class="row-fluid steps">
+            <div class="span4 step-validating">
+              <img src="img/icon-cred.png" id="icon-cred" alt="Verifying Credentials" />
+              <span>Verifying Credentials</span>
+            </div>
+            <div class="span4 step-saving">
+              <img src="img/icon-save.png" id="icon-save" alt="Writing to Database" />
+              <span>Writing to Database</span>
+            </div>
+            <div class="span4 step-final">
+              <img src="img/icon-star.png" id="icon-star" alt="Entry Processing" />
+              <span>Entry Processing</span>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('.step-validating').delay(100).animate({'opacity': '1'});
+      percentage = 30+"%";
+      $('#progress-bar-fill').animate({
+        'width': percentage
+        }, 1500, 'linear', function() {
+          $('#icon-cred').attr("src", 'img/icon-thumb.png');
+          $('.step-saving').animate({'opacity': '1'});
+          percentage = 60+"%";
+          $('#progress-bar-fill').animate({
+            'width': percentage
+            }, 1500, 'linear', function() {
+              $('#icon-save').attr("src", 'img/icon-thumb.png');
+              $('.step-final').animate({'opacity': '1'});
+              $('.step-saving').animate({'opacity': '1'});
+              percentage = 99+"%";
+              $('#progress-bar-fill').animate({
+                'width': percentage
+                }, 1500, 'linear', function() {
+                  $('#icon-star').attr("src", 'img/icon-thumb.png').delay(400).queue(function(next) { 
+                    //alert('Submit');
+                  });
+              });
+            })
+        });
+    });
+    </script>
+  </body>
+</html>

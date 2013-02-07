@@ -32,39 +32,26 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 .container-fluid {
   margin: 0 auto;
-  max-width: 820px;
-  background-color:#fff;
-  padding:20px 40px;
+  max-width: 860px;
+  padding:0 20px;
 }
 
+.bg-container {background-color:#fff;}
+
 .main-wrapper {
-	min-height:700px;
+	/*min-height:700px;*/
 	margin-top:-12px;
-	padding-top:40px;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 
 /* Header */
+#header {padding:20px;}
+
 #header .logo {
-	display:block;
-	text-indent:-9999px;
-	background: url('../img/sweepstakes_logo.png') no-repeat;
 	width:175px;
-	height:35px;
 	margin-right:20px;
 }
-
-.header-links {
-	margin:5px 0 0 0px;
-}
-
-.header-links li {
-	float:left;
-	list-style:none;
-	display:block;
-	margin-left:20px;
-}
-
-.header-links li a {color:#909092;}
 
 /* entry progress bar */
 
@@ -104,13 +91,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 	background-color:#ece7e6;
 	text-align:center;
 	padding:10px 20px;
-	border-bottom:1px solid #ded8d7;
-	
-	-webkit-box-shadow: 0px 1px 0px #eeebeb;
-     -moz-box-shadow: 0px 1px 0px #eeebeb;
-          box-shadow: 0px 1px 0px #eeebeb;
-		  
-		  margin-bottom:1px;
+	border-bottom:1px solid #ded8d7;	
 }
 
 .ribbon h1 {
@@ -135,7 +116,18 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 }
 
 
+/* Footer Links */
 
+.footer-links {text-align:center;}
+.footer-links ul {
+	display:inline-table;	
+	margin:15px;
+}
+.footer-links ul li {
+	display:inline;
+	padding:0 10px;
+}
+.footer-links ul li a {color:#fff;}
 
 
 /* Large desktop */
@@ -150,15 +142,6 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 			margin-left: 20px;
 		  }
 		
-		#header .span7 {
-			width: 62%;
-			*width: 62%;
-		  }
-		#header .span5 {
-			width: 33%;
-			*width: 33%;
-		  }
-
 }
  
 /* Landscape phone to portrait tablet */
@@ -167,24 +150,22 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 		body {
 			padding-right: 0px;
 			padding-left: 0px;
-		  }
-		
+		}		
 		.container-fluid {
 			margin-right: 20px;
 			margin-left: 20px;
-			padding:20px;
-		  }
-	    
-		#header { padding:0px;}
-		.header-links {float:right;}
-		#header .span5 {display:none;}
+		}	    
+		
+		#header .span6 {display:none;}
+		#header .logo {
+			float:none;
+			width:200px;
+			margin:0px auto;
+		}
 	
-	}
+}
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-			
-		.header-links {float:none;}
-		.ribbon h1 {font-size:26px; line-height:28px;}
-		
+		.ribbon h1 {font-size:26px; line-height:28px;}		
  }
