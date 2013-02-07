@@ -1,0 +1,190 @@
+/* fonts */
+@import url("font/font.css");
+
+/* Base Styling */
+body,html {
+  height: 100%;
+}
+
+body {
+	background: url('../img/orange-static-maze-bg.gif') #fe422b;
+	font: normal normal 13px 'ProximaNova_Semibold', Helvetica, Arial, sans-serif;
+	color: #666;
+}
+
+a {
+	color:#fe422b;	
+	opacity: 1;
+
+	-webkit-transition: opacity 200ms linear;
+	-moz-transition: opacity 200ms linear;
+	-o-transition: opacity 200ms linear;
+	-ms-transition: opacity 200ms linear;
+	transition: opacity 200ms linear;
+}
+a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#fe422b; }
+
+/* Custom containers */
+.container  {
+	margin: 0 auto;
+	max-width:940px;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 820px;
+  background-color:#fff;
+  padding:20px 40px;
+}
+
+.main-wrapper {
+	min-height:700px;
+	margin-top:-12px;
+	padding-top:40px;
+}
+
+/* Header */
+#header .logo {
+	display:block;
+	text-indent:-9999px;
+	background: url('../img/sweepstakes_logo.png') no-repeat;
+	width:175px;
+	height:35px;
+	margin-right:20px;
+}
+
+.header-links {
+	margin:5px 0 0 0px;
+}
+
+.header-links li {
+	float:left;
+	list-style:none;
+	display:block;
+	margin-left:20px;
+}
+
+.header-links li a {color:#909092;}
+
+/* entry progress bar */
+
+.entry-progress-bar {
+  height: 24px;
+  background: #f4f4f4;
+  border: 2px solid #ece7e6;
+  font-family: 'ProximaNova_Bold';
+  font-size: 11px;
+  line-height: 24px;
+  position: relative;
+}
+
+.entry-progress-bar-fill {
+  background: #fb3f28;
+  height: 24px;
+  overflow: hidden;
+}
+
+.entry-progress-text {
+  position: absolute;
+  color: #c7bebe;
+  width: 100%;
+  text-align: center;
+}
+
+.big-rounded-corners {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+}
+
+/* Ribbon */
+
+.ribbon {
+	background-color:#ece7e6;
+	text-align:center;
+	padding:10px 20px;
+	border-bottom:1px solid #ded8d7;
+	
+	-webkit-box-shadow: 0px 1px 0px #eeebeb;
+     -moz-box-shadow: 0px 1px 0px #eeebeb;
+          box-shadow: 0px 1px 0px #eeebeb;
+		  
+		  margin-bottom:1px;
+}
+
+.ribbon h1 {
+	font: normal normal 36px/40px 'EurostileExtended_Black', Helvetica, Arial, sans-serif;
+	color: #37363d;
+	text-transform:uppercase;
+	text-shadow:#fff 1px 1px;
+}
+
+.corner-left {
+	background:url('../img/img_corner.png') 0 0 no-repeat;
+	margin-top:-1px;
+	width:20px;
+	height:13px;
+}
+
+.corner-right {
+	background:url('../img/img_corner.png') -20px 0 no-repeat;
+	margin-top:-1px;
+	width:20px;
+	height:13px;
+}
+
+
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+		
+		.container {width:100%;}
+		.container-fluid {
+			margin-right: 20px;
+			margin-left: 20px;
+		  }
+		
+		#header .span7 {
+			width: 62%;
+			*width: 62%;
+		  }
+		#header .span5 {
+			width: 33%;
+			*width: 33%;
+		  }
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+		body {
+			padding-right: 0px;
+			padding-left: 0px;
+		  }
+		
+		.container-fluid {
+			margin-right: 20px;
+			margin-left: 20px;
+			padding:20px;
+		  }
+	    
+		#header { padding:0px;}
+		.header-links {float:right;}
+		#header .span5 {display:none;}
+	
+	}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+			
+		.header-links {float:none;}
+		.ribbon h1 {font-size:26px; line-height:28px;}
+		
+ }

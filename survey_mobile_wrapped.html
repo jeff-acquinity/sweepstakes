@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Sweepstakes - Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/wrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid bg-container">
+        <div id="header">
+          <div class="row-fluid">
+            <div class="span5">
+              <div class="logo"><a href="index.html" ><img src="img/sweepstakes_logo_large.png"/></a></div>
+            </div>
+            
+            <div class="span6 offset1">
+              <div class="entry-progress-bar big-rounded-corners">
+                <div class="entry-progress-bar-fill big-rounded-corners" style="width:50%;">
+                  <div class="entry-progress-text">
+                    ENTRY PROGRESS
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    <div class="container">
+    	<div class="ribbon">
+      	<h1>Win $5,000 a week for life</h1>
+      </div>
+      <div class="corner-left pull-left"></div>
+      <div class="corner-right pull-right"></div>
+    </div>
+    <div class="container-fluid main-wrapper bg-container">
+      <form class="form-inline survey-form" id="aspnetForm">
+        <!-- question -->
+        <div class="row-fluid survey-question-container">
+          <div class="span1 desktop-group">
+            <img src="img/icon-shop.png">
+          </div>
+          <div class="span11">
+            <span class="survey-question">Do you shop online?</span><br>
+            <div class="desktop-group">
+              <label class="radio inline">
+                <input class="main-question" name="shoponline" id="shoponlineY" value="Y" type="radio"> Yes
+              </label>
+              <label class="radio inline">
+                <input class="main-question" name="shoponline" id="shoponlineNomop" value="nomop" type="radio"> No, I don't have a credit/debit card
+              </label>
+              <label class="radio inline">
+                <input class="main-question" name="shoponline" id="shoponlineNo" value="No" type="radio"> No (other reason)
+              </label>
+            </div>
+            <!-- mobile -->
+            <div class="mobile-group mobile-answers">
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question test" name="shoponline" id="shoponlineY" value="Y" type="radio"> Yes
+              </label>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question" name="shoponline" id="shoponlineNomop" value="nomop" type="radio"> No credit/debit card
+              </label>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question" name="shoponline" id="shoponlineNo" value="No" type="radio"> No (other reason)
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- question -->
+        <div class="row-fluid survey-question-container">
+          <div class="span1 desktop-group">
+            <img src="img/icon-school.png">
+          </div>
+          <div class="span11">
+            <span class="survey-question">If you could go back to school to get a better job and make more money, would you?</span><br>
+            <div class="desktop-group">
+              <label class="radio inline">
+                <input class="main-question show-extra" name="edu" id="eduY" value="Y" type="radio"> Yes
+              </label>
+              <label class="radio inline">
+                <input class="main-question" name="edu" id="eduNo" value="No" type="radio"> No
+              </label>
+              <label class="radio inline">
+                <input class="main-question" name="edu" id="eduTakingclasses" value="TakingClasses" type="radio"> Already taking classes
+              </label>
+              <!-- extra questions -->
+              <div class="row extra-questions">
+                <div class="span11">
+                  <span class="survey-question">Do you have a high school diploma?</span><br>
+                  <div class="desktop-group">
+                    <label class="radio inline">
+                      <input class="extra-question" name="diploma" id="diplomaY" value="Y" type="radio"> Yes
+                    </label>
+                    <label class="radio inline">
+                      <input class="extra-question" name="diploma" id="diplomaNo" value="No" type="radio"> No
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- mobile -->
+            <div class="mobile-group mobile-answers">
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question show-extra" name="edu" id="eduY" value="Y" type="radio"> Yes
+              </label>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question" name="edu" id="eduNo" value="No" type="radio"> No
+              </label>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="main-question" name="edu" id="eduTakingclasses" value="TakingClasses" type="radio"> Already taking classes
+              </label>
+            </div>
+            <!-- extra mobile questions -->
+            <div class="mobile-group mobile-answers extra-questions-mobile">
+              <span class="survey-question">Do you have a high school diploma?</span><br>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="extra-question" name="diploma" id="diplomaY" value="Y" type="radio"> Yes
+              </label>
+              <label class="btn btn-large btn-block btn-orange">
+                <input class="extra-question" name="diploma" id="diplomaNo" value="No" type="radio"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="container-fluid footer-links">
+      <ul>
+        <li><a href="official-rules.html">Official Rules</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('input:radio').change(function() {
+        if ($(this).is(':checked') && $(this).parents('div').hasClass('mobile-answers')) {
+          $(this).parent().siblings('label').removeClass('btn-orange-selected');
+          $(this).parent('label').addClass('btn-orange-selected');
+        }
+        
+        // if on mobile prevent hidden desktop fields from submitting
+        if ($(this).parents('div').hasClass('mobile-answers')) {
+          $('.desktop-group input:hidden').attr("disabled",true);
+        }
+        
+        // prevent hidden mobile fields from submitting
+        if ($(this).parents('div').hasClass('desktop-group')) {
+          $('.mobile-group input:hidden').attr("disabled",true);
+        }
+
+      });
+      
+      $('.show-extra').change(function() {
+        if (!$(this).parents('div').hasClass('mobile-answers')) {
+          $(this).parents('.desktop-group').find('.extra-questions').fadeIn();
+        }
+        
+        else {
+          $(this).parents('div').find('.extra-questions-mobile').slideDown('slow');
+        }
+      });
+      
+      $('.main-question').change(function() {
+        if (!$(this).hasClass('show-extra')) {
+          if (!$(this).parents('div').hasClass('mobile-answers')) {
+            $(this).parents('.desktop-group').find('.extra-questions').fadeOut();
+          }
+          
+          else {
+          $(this).parents('div').find('.extra-questions-mobile').slideUp('slow');
+        }
+        }
+      });
+    });
+    </script>
+  
+</body></html>

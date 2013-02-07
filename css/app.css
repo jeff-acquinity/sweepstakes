@@ -1,0 +1,245 @@
+@import url("bootstrap.icon-large.min.css");
+
+/* buttons */
+
+.btn-orange {
+  background-color: hsl(12, 84%, 50%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed5d39", endColorstr="#ea3f14");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ed5d39), to(#ea3f14));
+  background-image: -moz-linear-gradient(top, #ed5d39, #ea3f14);
+  background-image: -ms-linear-gradient(top, #ed5d39, #ea3f14);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed5d39), color-stop(100%, #ea3f14));
+  background-image: -webkit-linear-gradient(top, #ed5d39, #ea3f14);
+  background-image: -o-linear-gradient(top, #ed5d39, #ea3f14);
+  background-image: linear-gradient(#ed5d39, #ea3f14);
+  border-color: #ea3f14 #ea3f14 hsl(12, 84%, 48%);
+  color: #fff !important;
+  text-shadow: 0 -1px -1px #c72f09;
+}
+
+.btn-orange-selected {
+  background-color: hsl(24, 100%, 50%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8432", endColorstr="#ff6600");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ff8432), to(#ff6600));
+  background-image: -moz-linear-gradient(top, #ff8432, #ff6600);
+  background-image: -ms-linear-gradient(top, #ff8432, #ff6600);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff8432), color-stop(100%, #ff6600));
+  background-image: -webkit-linear-gradient(top, #ff8432, #ff6600);
+  background-image: -o-linear-gradient(top, #ff8432, #ff6600);
+  background-image: linear-gradient(#ff8432, #ff6600);
+  border-color: #ff6600 #ff6600 hsl(24, 100%, 47.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px -1px #c72f09;
+}
+
+
+/* offer series */
+
+/*
+.entry-progress-bar {
+  height: 24px;
+  background: #f4f4f4;
+  border: 2px solid #ece7e6;
+  font: 'ProximaNova_Semibold';
+  font-size: 11px;
+  line-height: 24px;
+  position: relative;
+}
+
+.entry-progress-bar-fill {
+  background: #fb3f28;
+  height: 24px;
+  overflow: hidden;
+}
+
+.entry-progress-text {
+  position: absolute;
+  color: #bd041a;
+  width: 100%;
+  text-align: center;
+}
+*/
+
+/* processing entry */
+
+body,html {
+  height: 100%;
+}
+
+body.processing-entry {
+  background: url('../img/orange-animated-maze-bg.gif');
+}
+
+#progress-wrap {
+  position: relative;
+  height: 100%;
+}
+
+#progress-container {
+  height: 320px;
+  position: relative;
+  top: 45%;
+  margin-top: -160px;
+}
+
+.processing-entry h1 {
+  font: 'ProximaNova_Bold';
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+
+.processing-entry .steps {
+  text-align: center;
+}
+
+.processing-entry .steps .span2 {
+  opacity: 0.5;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter:alpha(opacity=50);
+}
+
+.processing-entry .steps img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  padding-bottom: 15px;
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+  zoom: 1;
+}
+
+.processing-entry .steps span {
+  font: 'ProximaNova_Semibold';
+  font-size: 17px;
+  color: #fff;
+}
+
+.processing-entry #progress-bar {
+  width: 100%;
+  background: #dbdbdb;
+  border: 3px solid #e73d29;
+  height: 40px;
+  margin: 40px 0px 40px 0px;
+}
+
+.processing-entry #progress-bar-fill {
+  width: 5%;
+  background: #ffe610;
+  height: 40px;
+}
+
+.big-rounded-corners {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+}
+
+/* survey page */
+
+.survey-form {
+  width:90%; 
+  margin:0 auto;
+}
+
+.survey-question-container {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #c4cacf;
+  margin-bottom:20px;
+}
+
+.survey-question {
+  font-size: 17px;
+	color: #555b5f;
+	font-weight: 600;
+}
+
+.extra-questions {
+  display: none;
+  padding-top: 15px;
+}
+
+input[type="radio"],input[type="checkbox"] {
+  margin-right: 8px !important;
+}
+
+.mobile-group {
+  display: none;
+}
+
+.mobile-group label {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.mobile-group label input {
+  margin-bottom: 8px;
+}
+
+.mobile-answers {
+  margin-top: 15px;
+}
+
+.extra-questions-mobile span {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+  
+  .processing-entry .steps .span2 {
+    padding-bottom: 15px;
+  }
+  
+  .processing-entry h1 {
+    font-size: 25px;
+  }
+  
+  #progress-container {
+    top: 40%;
+  }
+  
+  .processing-entry #progress-bar {
+    margin: 10px 0px 15px 0px;
+  }
+  
+  .processing-entry .steps span {
+    font-size: 14px;
+  }
+  
+  .processing-entry .steps img {
+    padding-bottom: 8px;
+  }
+  
+  .processing-entry #progress-bar, .processing-entry #progress-bar-fill {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row-fluid .desktop-group {
+    display: none;
+  }
+  
+  .mobile-group {
+    display: block;
+  }
+  
+  .extra-questions-mobile {
+    display: none;
+  }
+}
