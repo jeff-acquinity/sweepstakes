@@ -120,29 +120,84 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 .survey-headline {
 	text-align:center;
-	margin:10px 0 20px;
-	position:relative;
+	margin:10px 0 40px;
+	position: relative;
+	z-index: 1;
 	
 }
 
-.survey-ribbon h2 {
+/*.survey-ribbon h2 {
 	font: normal normal 30px/30px 'ProximaNova_Extrabold', Helvetica, Arial, sans-serif;
 	color:#1889c8;
 	text-shadow:#a3deff 1px 1px;
 	text-align:center;
 	padding:16px 13%;
 	background-color: #6ac1f2;
-	display: block;
+	display:inline-block;
 	
+}*/
+
+
+.ribbon-new {
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+
+ position: relative;
+ width:50%;
+ font: normal normal 30px/30px 'ProximaNova_Bold', Helvetica, Arial, sans-serif;
+ color:#1889c8;
+ text-shadow:#a3deff 1px 1px;
+ text-align: center;
+ background-color: #6ac1f2;
+ padding: 0.6em 1em; /* Adjust to suit */
+ margin: 0 auto; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
 
-.survey-ribbon-left {
-	/*position:absolute;*/
+.ribbon-new:before, .ribbon-new:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -0.5em;
+ border: 1em solid #4baee5;
+ z-index: -1;
+}
+
+.ribbon-new:before {
+ left: -1.25em;
+ border-right-width: 1em;
+ border-left-color: transparent;
+}
+
+.ribbon-new:after {
+ right: -1.25em;
+ border-left-width: 1em;
+ border-right-color: transparent;
+}
+.ribbon-new .ribbon-content:before, .ribbon-new .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #1889c8 transparent transparent transparent;
+ bottom: -0.5em;
+}
+
+.ribbon-new .ribbon-content:before {
+ left: 0;
+ border-width: 0.5em 0 0 0.75em;
+}
+.ribbon-new .ribbon-content:after {
+ right: 0;
+ border-width: 0.5em 0.75em 0 0;
+}
+
+/*.survey-ribbon-left {
+	
 	background:url('../img/survey-ribbon-corner.png') 0 0 no-repeat;
 	margin-top:10px;
 	width:50px;
 	height:68px;
-}
+}*/
 
 
 /* ribbon style */
@@ -175,6 +230,8 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 			margin-right: 20px;
 			margin-left: 20px;
 		  }
+		  
+		  
 		
 }
  
@@ -196,11 +253,13 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 			width:200px;
 			margin:0px auto;
 		}
+		
+		.ribbon-new  { font-size:26px; line-height:26px; width:70%; padding: 0.6em 0.5em;}		
 	
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
 		.ribbon h1 {font-size:26px; line-height:28px;}
-		/*.survey-ribbon h2 { font-size:24px; padding:12px 13%;}		*/
+		.ribbon-new  { font-size:22px; line-height:22px; width:80%; padding: 0.6em 0.5em;}		
  }
