@@ -1,4 +1,39 @@
-@import url("bootstrap.icon-large.min.css");
+/* fonts */
+
+/*
+@font-face {
+  font: 'ProximaNova_Semibold';
+  src: url('fonts/proximanovaalt-sbold-webfont.eot');
+  src: url('fonts/proximanovaalt-sbold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/proximanovaalt-sbold-webfont.woff') format('woff'),
+       url('fonts/proximanovaalt-sbold-webfont.ttf') format('truetype'),
+       url('fonts/proximanovaalt-sbold-webfont.svg#ProximaNova_Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font: 'proxima_nova_alt_rgregular';
+  src: url('fonts/proximanovaalt-reg-webfont.eot');
+  src: url('fonts/proximanovaalt-reg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/proximanovaalt-reg-webfont.woff') format('woff'),
+       url('fonts/proximanovaalt-reg-webfont.ttf') format('truetype'),
+       url('fonts/proximanovaalt-reg-webfont.svg#proxima_nova_alt_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font: 'ProximaNova_Bold';
+  src: url('fonts/proximanovaalt-bold-webfont.eot');
+  src: url('fonts/proximanovaalt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/proximanovaalt-bold-webfont.woff') format('woff'),
+       url('fonts/proximanovaalt-bold-webfont.ttf') format('truetype'),
+       url('fonts/proximanovaalt-bold-webfont.svg#ProximaNova_Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
 
 /* buttons */
 
