@@ -118,139 +118,173 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 /* Survey Headline */
 
+
 .survey-headline {
 	text-align:center;
 	margin:10px auto 40px;
 	position: relative;
 	z-index: 1;
-	
+	display:none\9;	 /* Do not display in IE 8 and below */
 }
 
-/*.survey-ribbon-new {
+
+/* ribbon for morden browsers */
+
+.survey-ribbon {
+	 position: relative;
+	 width:50%;
+	 font: normal normal 30px/30px 'ProximaNova_Bold', Helvetica, Arial, sans-serif;
+	 color:#1889c8;
+	 text-shadow:#a3deff 1px 1px;
+	 text-align: center;
+	 background-color: #6ac1f2;
+	 padding: 0.6em 1em;
+	 margin: 0 auto;
+}
+
+.survey-ribbon:before, .survey-ribbon:after {
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 bottom: -0.5em;
+	 border: 1em solid #4baee5;
+	 z-index: -1;
+}
+
+.survey-ribbon:before {
+	 left: -1em;
+	 width:1.15em;
+	 /*border-right-width: 1em;*/
+	 border-width: 1.1em 0.3em;
+	 border-left-color: transparent;
+	 border-left-style:inset;
+	 
+	 -moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+}
+
+.survey-ribbon:after {
+	 right: -1em;
+	 width:1.15em;
+	 /*border-left-width: 1em;*/
+	 border-width: 1.1em 0.3em;
+	 border-right-color: transparent;
+	 border-right-style:inset;
+	 
+	 -moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+}
+.survey-ribbon .ribbon-content:before, .survey-ribbon .ribbon-content:after {
+	 content: "";
+	 position: absolute;
+	 display: block;
+	 border-style: solid;
+	 border-color: #1889c8 transparent transparent transparent;
+	 bottom: -0.5em;
+	 border-bottom-style:inset;
+}
+
+.survey-ribbon .ribbon-content:before {
+	 left: 0;
+	 border-width: 0.5em 0 0 0.75em;
+}
+.survey-ribbon .ribbon-content:after {
+	 right: 0;
+	 border-width: 0.5em 0.75em 0 0;
+}
+
+
+/* ribbon for IE8 and below */
+
+.survey-ribbon-ie {
 	position: relative;
 	width: 50%;
-	font-size: 1.5em;
-	font-weight: bold;
-	padding: 0.6em 1em; 
+	font: normal normal 30px/30px 'ProximaNova_Bold', Helvetica, Arial, sans-serif;
+	color:#1889c8;
+	padding: 0.5em 1em; 
 	margin: 0 auto;
-	color: #555;
-	background-color: #999;
-	text-shadow: 0px 1px 2px #bbb;
+	background-color: #6ac1f2;
+	text-shadow:#a3deff 1px 1px;
+	text-align: center;
+	
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
 }
-.survey-ribbon-new:after {
+.survey-ribbon-ie:after {
 	content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
 	left: 0px;
 	top: 100%;
-	border-width: 5px 10px;
+	/*border-width: 0.25em 0.4em;*/
+	border-width: 0.5em 0 0 0.75em;
 	border-style: solid;
-	border-color: #666 #666 transparent transparent;
+	border-color: #1889c8 #1889c8 transparent transparent;
+	border-left-style:inset;
+	z-index: -1;
 }
-.survey-ribbon-new:before {
+.survey-ribbon-ie:before {
+	display: block;
 	content: ' ';
 	position: absolute;
-	width: 30px;
+	/*width: 1em;*/
 	height: 0;
-	left: -30px;
-	bottom: -10px;
-	border-width: 20px 10px;
+	left: -1.25em;
+	bottom: -0.5em;
+	/*border-width: 1em 0.3em;*/
+	border-width: 1em;
 	border-style: solid;
-	border-color: #999 #999 #999 transparent;
+	border-color: #6ac1f2 #6ac1f2 #6ac1f2 transparent;
+	border-left-style:inset;
+	
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
 }
 
-
-.ribbon-content-new:after {
+.ribbon-content-ie:after {
 	content: ' ';
 	position: absolute;
 	display:block;
 	right: 0px;
 	top: 100%;
-	border-width: 5px 10px;
+	/*border-width: 0.25em 0.4em;*/
+	border-width: 0.5em 0.75em 0 0;
 	border-style: solid;
-	border-color:   #666 transparent  transparent #666;
+	border-color:   #1889c8 transparent  transparent #1889c8;
+	border-bottom-style:inset;
 }
-.ribbon-content-new:before {
+
+.ribbon-content-ie:before {
 	content: ' ';
 	position: absolute;
 	display:block;
-	width: 30px;
-	right: -30px;
-	bottom: -10px;
-	border-width: 20px 10px;
+	/*width: 1em;*/
+	right: -1.25em;
+	bottom: -0.5em;
+	/*border-width: 1em 0.3em;*/
+	border-width: 1em;
 	border-style: solid;
-	border-color: #999 transparent #999 #999 ;
-}*/
-
-
-
-
-
-/*.survey-ribbon h2 {
-	font: normal normal 30px/30px 'ProximaNova_Extrabold', Helvetica, Arial, sans-serif;
-	color:#1889c8;
-	text-shadow:#a3deff 1px 1px;
-	text-align:center;
-	padding:16px 13%;
-	background-color: #6ac1f2;
-	display:inline-block;
-	
-}*/
-
-
-.ribbon-new {
- /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-
-
- position: relative;
- width:50%;
- font: normal normal 30px/30px 'ProximaNova_Bold', Helvetica, Arial, sans-serif;
- color:#1889c8;
- text-shadow:#a3deff 1px 1px;
- text-align: center;
- background-color: #6ac1f2;
- padding: 0.6em 1em; /* Adjust to suit */
- margin: 0 auto; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+	border-color: #6ac1f2 transparent #6ac1f2 #6ac1f2;
+	border-right-style:inset;
 }
 
-.ribbon-new:before, .ribbon-new:after {
- content: "";
- position: absolute;
- display: block;
- bottom: -0.5em;
- border: 1em solid #4baee5;
- z-index: -1;
+.survey-headline.ie {
+	display:none;
+	display:block\9;  /* Display in IE 8 and below */
 }
 
-.ribbon-new:before {
- left: -1.25em;
- border-right-width: 1em;
- border-left-color: transparent;
-}
 
-.ribbon-new:after {
- right: -1.25em;
- border-left-width: 1em;
- border-right-color: transparent;
-}
-.ribbon-new .ribbon-content:before, .ribbon-new .ribbon-content:after {
- content: "";
- position: absolute;
- display: block;
- border-style: solid;
- border-color: #1889c8 transparent transparent transparent;
- bottom: -0.5em;
-}
 
-.ribbon-new .ribbon-content:before {
- left: 0;
- border-width: 0.5em 0 0 0.75em;
-}
-.ribbon-new .ribbon-content:after {
- right: 0;
- border-width: 0.5em 0.75em 0 0;
-}
+
 
 
 
@@ -306,14 +340,14 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 			margin:0px auto;
 		}
 		
-		.ribbon-new  { font-size:26px; line-height:26px; width:70%; padding: 0.6em 0.5em;}		
+		.survey-ribbon, .survey-ribbon-ie  { font-size:26px; line-height:26px; width:70%; padding: 0.6em 0.5em;}		
 	
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
 		.ribbon h1 {font-size:26px; line-height:28px;}
-		.ribbon-new  { font-size:22px; line-height:22px; width:80%; padding: 0.6em 0.5em;}		
+		.survey-ribbon, .survey-ribbon-ie  { font-size:22px; line-height:22px; width:80%; padding: 0.6em 0.5em;}		
  }
  
  
