@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pure CSS3 Ribbons Without Images</title>
+ 
+<style type="text/css"> 
+body
+{
+	font-family: arial, helvetica, freesans, sans-serif;
+	font-size: 100%;
+	color: #333;
+	background-color: #ddd;
+}
+ 
+#page
+{
+	width: 500px;
+	padding: 50px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #333;
+}
+ 
+h1
+{
+	font-size: 1.6em;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+h2
+{
+	position: relative;
+	width: 50%;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 6px 20px 6px 71px;
+	margin: 30px 10px 10px -71px;
+	color: #555;
+	background-color: #999;
+	text-shadow: 0px 1px 2px #bbb;
+	-webkit-box-shadow: 0px 2px 4px #888;
+	-moz-box-shadow: 0px 2px 4px #888;
+	box-shadow: 0px 2px 4px #888;
+}
+ 
+h2:before, h2:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+ 
+h2:before
+{
+	width: 30px;
+	left: -30px;
+	top: 12px;
+	border-width: 20px 10px;
+	border-style: solid;
+	border-color: #999 #999 #999 transparent;
+}
+ 
+h2.simple:before
+{
+	display: none;
+}
+ 
+h2.flag:before
+{
+	width: 0px;
+	left: auto;
+	right: -2px;
+	top: 0px;
+	border-color: transparent #fff transparent transparent;
+}
+ 
+h2:after
+{
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
+}
+</style>
+ 
+</head>
+<body>
+ 
+<div id="page">
+ 
+<h1>Pure CSS3 Ribbons Without Images</h1>
+ 
+<p>No images or additional elements are used to create these ribbons.</p>
+ 
+<h2 class="simple">Requirements</h2>
+ 
+<p>You only require a single &lt;h2&gt; tag and a little CSS3 code.</p>
+ 
+<h2 class="flag">More Information</h2>
+ 
+<p>For more information, please please refer to:<br />
+<a href="http://blogs.sitepoint.com/pure-css3-ribbons/">Pure CSS3 Ribbons Without Images</a></p>
+ 
+<h2>No Restrictions</h2>
+ 
+<p>This example code was developed by <a href="http://twitter.com/craigbuckler">Craig Buckler</a> of <a href="http://optimalworks.net/">OptimalWorks.net</a> for <a href="http://sitepoint.com/">SitePoint.com</a>.</p>
+ 
+<p>It can be used without any restrictions but please don't expect 24/7 support! A link back to <a href="http://www.sitepoint.com/">SitePoint.com</a> is appreciated.</p>
+ 
+</div>
+ 
+</body>
+</html>

@@ -120,11 +120,72 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 .survey-headline {
 	text-align:center;
-	margin:10px 0 40px;
+	margin:10px auto 40px;
 	position: relative;
 	z-index: 1;
 	
 }
+
+/*.survey-ribbon-new {
+	position: relative;
+	width: 50%;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0.6em 1em; 
+	margin: 0 auto;
+	color: #555;
+	background-color: #999;
+	text-shadow: 0px 1px 2px #bbb;
+}
+.survey-ribbon-new:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
+}
+.survey-ribbon-new:before {
+	content: ' ';
+	position: absolute;
+	width: 30px;
+	height: 0;
+	left: -30px;
+	bottom: -10px;
+	border-width: 20px 10px;
+	border-style: solid;
+	border-color: #999 #999 #999 transparent;
+}
+
+
+.ribbon-content-new:after {
+	content: ' ';
+	position: absolute;
+	display:block;
+	right: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color:   #666 transparent  transparent #666;
+}
+.ribbon-content-new:before {
+	content: ' ';
+	position: absolute;
+	display:block;
+	width: 30px;
+	right: -30px;
+	bottom: -10px;
+	border-width: 20px 10px;
+	border-style: solid;
+	border-color: #999 transparent #999 #999 ;
+}*/
+
+
+
+
 
 /*.survey-ribbon h2 {
 	font: normal normal 30px/30px 'ProximaNova_Extrabold', Helvetica, Arial, sans-serif;
@@ -191,16 +252,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
  border-width: 0.5em 0.75em 0 0;
 }
 
-/*.survey-ribbon-left {
-	
-	background:url('../img/survey-ribbon-corner.png') 0 0 no-repeat;
-	margin-top:10px;
-	width:50px;
-	height:68px;
-}*/
 
-
-/* ribbon style */
 
 
 
@@ -263,3 +315,9 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 		.ribbon h1 {font-size:26px; line-height:28px;}
 		.ribbon-new  { font-size:22px; line-height:22px; width:80%; padding: 0.6em 0.5em;}		
  }
+ 
+ 
+ /* Test */
+ 
+
+ 
