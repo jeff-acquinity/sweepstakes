@@ -47,7 +47,6 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 /* Header */
 #header {padding:20px;}
-
 #header .logo {
 	width:175px;
 	margin-right:20px;
@@ -85,35 +84,57 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
   border-radius: 20px;
 }
 
-/* Ribbon */
 
-.ribbon {
-	background-color:#ece7e6;
-	text-align:center;
-	padding:10px 20px;
-	border-bottom:1px solid #ded8d7;	
+/* Ribbon Main */
+
+.ribbon-main {
+	margin: 0 auto;
+	max-width:940px;
 }
 
-.ribbon h1 {
+.ribbon-main h1 {
+	position:relative;
+	text-align:center;
+    background-color:#ece7e6;
+	margin:0;
+	padding:20px;	
+	
 	font: normal normal 36px/40px 'EurostileExtended_Black', Helvetica, Arial, sans-serif;
 	color: #37363d;
 	text-transform:uppercase;
 	text-shadow:#fff 1px 1px;
+	border-bottom:1px solid #ded8d7;
+	
+	-moz-box-shadow:1px 1px 0 rgba(0,0,0,0.05);
+    -webkit-box-shadow:1px 1px 0 rgba(0,0,0,0.05);
+    -o-box-shadow:1px 1px 0 rgba(0,0,0,0.05);
+    box-shadow:1px 1px 0 rgba(0,0,0,0.05);
 }
 
-.corner-left {
-	background:url('../img/img_corner.png') 0 0 no-repeat;
-	margin-top:-1px;
-	width:20px;
-	height:13px;
+.ribbon-main h1:before {
+	content: ' ';
+	position: absolute;
+	display:block;
+	right: 0px;
+	top: 100%;
+	border-width: 13px 20px 0 0;
+	border-style: solid;
+	border-color:   #645452 transparent  transparent #645452;
+	border-bottom-style:inset;
 }
 
-.corner-right {
-	background:url('../img/img_corner.png') -20px 0 no-repeat;
-	margin-top:-1px;
-	width:20px;
-	height:13px;
+.ribbon-main h1:after {
+	content: ' ';
+	position: absolute;
+	display:block;
+	left: 0px;
+	top: 100%;
+	border-width: 13px 0 0 20px;
+	border-style: solid;
+	border-color:   #645452 #645452 transparent transparent;
+	border-bottom-style:inset;
 }
+
 
 
 /* Survey Headline */
@@ -121,7 +142,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 
 .survey-headline {
 	text-align:center;
-	margin:10px auto 40px;	
+	margin:20px auto 40px;	
 }
 
 .survey-headline h6 {
@@ -137,7 +158,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 }
 
 
-/* ribbon for morden browsers */
+/* survey ribbon for morden browsers */
 
 .survey-ribbon {
 	 position: relative;
@@ -207,7 +228,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 }
 
 
-/* ribbon for IE8 and below */
+/* survey ribbon for IE8 and below */
 
 .survey-ribbon-ie {
 	position: relative;
@@ -237,7 +258,6 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 	border-style: solid;
 	border-color: #1889c8 #1889c8 transparent transparent;
 	border-left-style:inset;
-	z-index: -1;
 }
 .survey-ribbon-ie:before {
 	display: block;
@@ -314,7 +334,6 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
 		
-		.container {width:100%;}
 		.container-fluid {
 			margin-right: 20px;
 			margin-left: 20px;
@@ -346,7 +365,7 @@ a:hover { opacity: 0.7; filter:alpha(opacity=70); text-decoration:none; color:#f
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-		.ribbon h1 {font-size:26px; line-height:28px;}
+		.ribbon-main h1 {font-size:26px; line-height:28px; padding:15px;}
 		.survey-headline {margin-bottom:20px;}
 		.survey-ribbon, .survey-ribbon-ie  { font-size:22px; line-height:22px; width:80%; padding: 0.6em 0.5em;}		
  }
